@@ -258,6 +258,8 @@ define([ 'exports', 'log', 'util', 'message', 'comm', 'robot.controller', 'user.
             $('.scroller-left').click();
             $('#tabProgram').click();
         }, 'tabProgram clicked');
+        
+        
 
         $('#menuTabConfiguration').onWrap('click', '', function(event) {
             if ($('#tabProgram').hasClass('tabClicked')) {
