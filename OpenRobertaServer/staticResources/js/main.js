@@ -46,6 +46,7 @@ require.config({
         'group.model' : '../app/roberta/models/group.model',
         'groupList.model' : '../app/roberta/models/groupList.model',
         'groupList.controller' : '../app/roberta/controller/groupList.controller',
+        'groupDelete.controller' : '../app/roberta/controller/groupDelete.controller',
         'group.controller' : '../app/roberta/controller/group.controller',
         'rest.robot' : '../app/roberta/rest/robot',
 
@@ -113,7 +114,7 @@ require.config({
 
 require([ 'require', 'wrap', 'jquery', 'jquery-cookie', 'guiState.controller', 'progList.controller', 'logList.controller', 'confList.controller',
         'progDelete.controller', 'confDelete.controller','progShare.controller', 'menu.controller', 'user.controller', 'robot.controller', 'program.controller',
-        'configuration.controller', 'language.controller', 'volume-meter' , 'group.controller', 'groupList.controller'], function(require) {
+        'configuration.controller', 'language.controller', 'volume-meter' , 'group.controller', 'groupList.controller', 'groupDelete.controller'], function(require) {
 
     $ = require('jquery', 'jquery-cookie');
     WRAP = require('wrap');
@@ -132,6 +133,7 @@ require([ 'require', 'wrap', 'jquery', 'jquery-cookie', 'guiState.controller', '
     robotController = require('robot.controller');
     userController = require('user.controller');
     groupListController = require('groupList.controller');
+    groupDeleteController = require('groupDelete.controller');
     groupController = require('group.controller');
 
     $(document).ready(WRAP.fn3(init, 'page init'));
@@ -151,6 +153,7 @@ function init() {
     }).then(function() {
         progListController.init();
         groupListController.init();
+        groupDeleteController.init();
         progDeleteController.init();
         confListController.init();
         confDeleteController.init();
