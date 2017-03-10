@@ -1,7 +1,6 @@
 define([ 'exports', 'comm', 'message', 'log', 'util', 'guiState.controller', 'program.model', 'prettify', 'robot.controller', 'progHelp.controller', 'progInfo.controller', 'progCode.controller', 'progSim.controller', 'blocks', 'jquery', 'jquery-validate', 'blocks-msg' ], function(exports, COMM, MSG, LOG, UTIL, GUISTATE_C, PROGRAM, Prettify, ROBOT_C, HELP_C, INFO_C, CODE_C, SIM_C, Blockly, $) {
 
     var $formSingleModal;
-
     var blocklyWorkspace;
     var listenToBlocklyEvents = true;
     /**
