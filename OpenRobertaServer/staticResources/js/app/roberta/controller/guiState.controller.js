@@ -23,6 +23,8 @@ define([ 'exports', 'util', 'log', 'message', 'guiState.model', 'jquery' ], func
             GUISTATE.program.name = 'NEPOprog';
             GUISTATE.program.shared = false;
             GUISTATE.program.toolbox.level = 'beginner';
+            
+            GUISTATE.group.name = 'test';
 
             LOG.info('init gui state');
             ready.resolve();
@@ -485,7 +487,7 @@ define([ 'exports', 'util', 'log', 'message', 'guiState.model', 'jquery' ], func
     exports.getGroupName = getGroupName;
     
     function setGroupName(name) {
-        $('#tabGroupName').html(name);
+        //$('#tabGroupName').html(name);
         GUISTATE.group.name = name;
     }
     exports.setGroupName = setGroupName;
